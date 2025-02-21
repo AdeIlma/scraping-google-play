@@ -13,8 +13,11 @@ def main():
     app_ids = []
     app_names = []
     for i in range(num_apps):
-        app_id = st.text_input(f"Masukkan ID aplikasi Google Play Store ke-{i+1} (contoh: com.gojek.gopay):")
-        app_name = st.text_input(f"Masukkan nama aplikasi ke-{i+1}:")
+        col1, col2 = st.columns(2)
+        with col1:
+            app_id = st.text_input(f"Masukkan ID aplikasi ke-{i+1} (contoh: com.gojek.gopay):")
+        with col2:
+            app_name = st.text_input(f"Masukkan nama aplikasi ke-{i+1}:")
         app_ids.append(app_id)
         app_names.append(app_name)
 
