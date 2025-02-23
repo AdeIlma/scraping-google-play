@@ -60,6 +60,7 @@ def main():
                             filtered_reviews.append({
                                 'content': review.get('content', ''),
                                 'aplikasi': app_name,
+                                'rating': review.get('score', None),  # Tambahkan rating
                                 'at': review['at']
                             })
                     result.extend(filtered_reviews)
